@@ -58,7 +58,7 @@ document.getElementById("greeting").textContent = greeting;
 // CUSTOMIZE: write your own fun facts here. Keep each one inside "quotes",
 // separated by commas.
 const funFacts = [
-  "I deployed my first cloud website at the AWS S3 Bootcamp.",
+  "Weng weng weng.",
   "My favorite programming language is JavaScript... for now.",
   "I can solve a Rubik's cube in under two minutes.",
 ];
