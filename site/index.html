@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  YOUR PORTFOLIO WEBSITE - START HERE
+  ------------------------------------------------------------
+  This file is the page visitors see first. On Amazon S3 it MUST
+  be named exactly "index.html" (all lowercase).
+
+  Look for comments that say  CHANGE ...  /  REPLACE ...  /
+  CUSTOMIZE ...  - those are the parts made for you to edit.
+
+  File map:
+    index.html  -> content and structure (what is on the page)
+    style.css   -> colors, fonts, layout (how it looks)
+    script.js   -> small interactions (what happens on click)
+    assets/     -> images. Paths below are RELATIVE: "assets/..."
+                   (no leading "/" and no "C:\..." paths!)
+  ============================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CHANGE YOUR NAME HERE (this is the text on the browser tab) -->
+  <title>Juan Dela Cruz | Portfolio</title>
+  <meta name="description" content="Personal portfolio built during the AWS S3 Bootcamp.">
+
+  <!-- A tiny emoji icon for the browser tab, built in so no extra file is needed -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☁️</text></svg>">
+
+  <!-- Relative path: style.css sits next to index.html -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===================== HEADER & NAVIGATION ===================== -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <!-- CHANGE YOUR NAME HERE (short version or initials) -->
+      <a class="nav__brand" href="#home">Juan<span>.dev</span></a>
+
+      <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">
+        <span class="sr-only">Open menu</span>☰
+      </button>
+
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <button class="theme-toggle" id="themeToggle" aria-label="Switch light/dark theme">🌙</button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===================== HERO / INTRODUCTION ===================== -->
+    <section class="hero container" id="home">
+      <div class="hero__text">
+        <p class="hero__greeting" id="greeting">Hello!</p>
+        <!-- CHANGE YOUR NAME HERE -->
+        <h1>I'm <span class="highlight">Juan Dela Cruz</span></h1>
+        <!-- CHANGE YOUR INTRODUCTION HERE (one or two sentences) -->
+        <p class="hero__intro">
+          An IT student at Philippine Christian University who just deployed
+          this website to the cloud with Amazon S3.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#projects">See my projects</a>
+          <a class="btn btn--ghost" href="#contact">Contact me</a>
+        </div>
+      </div>
+
+      <!-- REPLACE THIS IMAGE: put your photo in the assets folder, then
+           change the file name below. Keep the "assets/" part.
+           Tip: file names are case-sensitive on S3. "Me.JPG" is not "me.jpg". -->
+      <img class="hero__photo" src="assets/profile-placeholder.png"
+           alt="Portrait of Juan Dela Cruz" width="320" height="320">
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section__title">About me</h2>
+        <!-- CHANGE YOUR ABOUT TEXT HERE -->
+        <p>
+          I enjoy turning ideas into things people can use. I am currently learning
+          cloud computing, web development and how real applications are put online.
+          Outside class I like basketball, music and helping friends fix their computers.
+        </p>
+        <!-- CHANGE THESE QUICK FACTS -->
+        <ul class="facts">
+          <li><strong>Course:</strong> BS Information Technology</li>
+          <li><strong>Location:</strong> Dasmariñas, Cavite</li>
+          <li><strong>Currently learning:</strong> AWS, Git, JavaScript</li>
+        </ul>
+        <button class="btn btn--small" id="funFactButton">Tell me a fun fact</button>
+        <p class="fun-fact" id="funFact" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section class="section section--alt" id="skills">
+      <div class="container">
+        <h2 class="section__title">Skills</h2>
+        <!-- CUSTOMIZE YOUR SKILLS: copy a <li> line to add one, delete a line to remove one.
+             The number in style="--level: 80%" sets how full the bar is (0% to 100%). -->
+        <ul class="skills">
+          <li class="skill" style="--level: 80%"><span>HTML</span></li>
+          <li class="skill" style="--level: 65%"><span>CSS</span></li>
+          <li class="skill" style="--level: 50%"><span>JavaScript</span></li>
+          <li class="skill" style="--level: 40%"><span>Java / OOP</span></li>
+          <li class="skill" style="--level: 30%"><span>AWS (Amazon S3)</span></li>
+          <li class="skill" style="--level: 35%"><span>Git &amp; GitHub</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <h2 class="section__title">Projects</h2>
+        <div class="projects">
+
+          <!-- CHANGE YOUR PROJECT DETAILS (project 1) -->
+          <article class="card">
+            <!-- REPLACE THIS IMAGE -->
+            <img src="assets/project-1.png" alt="Screenshot of my cloud portfolio" width="640" height="400">
+            <div class="card__body">
+              <h3>Cloud Portfolio</h3>
+              <p>This website! Built with HTML, CSS and JavaScript and hosted on Amazon S3.</p>
+              <p class="tags"><span>HTML</span><span>CSS</span><span>S3</span></p>
+            </div>
+          </article>
+
+          <!-- CHANGE YOUR PROJECT DETAILS (project 2) -->
+          <article class="card">
+            <img src="assets/project-2.png" alt="Screenshot of a library system" width="640" height="400">
+            <div class="card__body">
+              <h3>Library System</h3>
+              <p>A Java console app that tracks borrowed books using classes and objects.</p>
+              <p class="tags"><span>Java</span><span>OOP</span></p>
+            </div>
+          </article>
+
+          <!-- CHANGE YOUR PROJECT DETAILS (project 3) -->
+          <article class="card">
+            <img src="assets/project-3.png" alt="Screenshot of a grade calculator" width="640" height="400">
+            <div class="card__body">
+              <h3>Grade Calculator</h3>
+              <p>A small JavaScript tool that computes my semester average.</p>
+              <p class="tags"><span>JavaScript</span></p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section section--alt" id="contact">
+      <div class="container contact">
+        <h2 class="section__title">Contact</h2>
+        <p>Want to build something together? Reach out!</p>
+        <!-- CHANGE YOUR CONTACT LINKS. This website is PUBLIC:
+             only share what you are comfortable with everyone seeing.
+             Never put phone numbers, home addresses or passwords here. -->
+        <ul class="contact__links">
+          <li><a href="mailto:your.school.email@example.com">✉️ Email</a></li>
+          <li><a href="https://github.com/" target="_blank" rel="noopener">🐙 GitHub</a></li>
+          <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">💼 LinkedIn</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <!-- CHANGE YOUR NAME HERE -->
+      <p>&copy; <span id="year">2026</span> Juan Dela Cruz · Hosted on Amazon S3 · AWS S3 Bootcamp, PCU Cavite</p>
+    </div>
+  </footer>
+
+  <!-- Relative path: script.js sits next to index.html.
+       "defer" means: run after the page has loaded. -->
+  <script src="script.js" defer></script>
+</body>
+</html>
